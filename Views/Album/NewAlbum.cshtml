@@ -1,0 +1,45 @@
+@model NewAlbumViewModel
+@{
+    ViewData["Message"] = "Album.";
+}
+
+<h2>@ViewData["Title"].</h2>
+
+<form asp-controller="Album" asp-action="NewAlbum" method="post" class="form-horizontal" role="form">
+    <h4>Create a new Album</h4>
+    <hr />
+    <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Title" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Artist" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Artist" class="form-control" />
+            <span asp-validation-for="Artist" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Year" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Year" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+    </div>
+	 <div class="form-group">
+        <label asp-for="Genre" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Genre" class="form-control" />
+            <span asp-validation-for="Genre" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Create</button>
+        </div>
+    </div>
+</form>

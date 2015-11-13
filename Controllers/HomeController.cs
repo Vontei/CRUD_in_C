@@ -26,6 +26,13 @@ namespace firstDotNet.Controllers
 
             return View();
         }
+        
+        public IActionResult Items()
+        {
+            ViewData["Message"] = "List of Items to CRUD.";
+            
+            return View();
+        }
 
         public IActionResult Error()
         {
